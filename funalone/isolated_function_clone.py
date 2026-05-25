@@ -38,7 +38,7 @@ class IsolatedFunctionClone(Generic[P, R]):
         tested_function: Callable[P, R],
         *,
         custom_mocked_objects: dict | Iterable[tuple[NamedObject, Mock]] | None = None,
-        name_allow_list: Iterable[NamedObject] | None = None,
+        name_allow_list: Iterable[NamedObject | str] | None = None,
         name_allow_condition: Callable[[str, Any], bool] | None = None,
         allow_all_names: bool = False,
         allow_builtins: bool = True,
